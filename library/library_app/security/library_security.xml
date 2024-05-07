@@ -22,4 +22,6 @@
             <field name="groups" eval="[(4,ref('library_group_user'))]"/>
         </record>
     </data>
+
+    
 </odoo>
