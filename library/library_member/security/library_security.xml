@@ -3,4 +3,11 @@
     <record id="library_app.library_group_user" model="res.groups">
         <field name="name">Librarian</field>
     </record>
+
+    <record id="member_user_own_rule" model="ir.rule">
+        <field name="name">Library Member User Own Access</field>
+        <field name="model_id" ref="model_library_member"/>
+        <field name="domain_force">[('create_uid', '=', user.id)]</field>
+        <field name="groups" eval="[(4,ref('library_app.library_group_user'))]"/>
+    </record>
 </odoo>
