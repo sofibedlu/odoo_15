@@ -12,11 +12,11 @@ class LibraryBook(models.Model):
         digits = [int(x) for x in self.isbn if x.isdigit()]
         if len(digits) == 10:
             # Check if the length is 10 and only contains digits or 'X' (for the check digit)
-            if not isbn or len(isbn) != 10 or not all(char in '0123456789X' for char in isbn):
+            if not self.isbn or len(self.isbn) != 10 or not all(char in '0123456789X' for char in self.isbn):
                 return False
 
             # Remove hyphens or spaces (optional for handling different formats)
-            isbn = isbn.replace("-", "").replace(" ", "")
+            isbn = self.isbn.replace("-", "").replace(" ", "")
 
             # Convert the ISBN to a list of integers (excluding 'X')
             isbn_digits = [int(char) for char in isbn[:-1]]
