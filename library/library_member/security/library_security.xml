@@ -1,8 +1,8 @@
 <odoo>
     <!--Modify Group name-->
-    <record id="library_app.library_group_user" model="res.groups">
+    <!--<record id="library_app.library_group_user" model="res.groups">
         <field name="name">Librarian</field>
-    </record>
+    </record>-->
 
     <record id="member_user_own_rule" model="ir.rule">
         <field name="name">Library Member User Own Access</field>
@@ -11,5 +11,4 @@
         <field name="groups" eval="[(4,ref('library_app.library_group_user'))]"/>
     </record>
 
-    
 </odoo>
