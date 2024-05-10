@@ -5,6 +5,7 @@
     "depends": ["library_member", "mail"],
     "data": [
         "security/ir.model.access.csv",
+        "security/library_security.xml",
         "wizard/checkout_mass_message_wizard_view.xml",
         "views/library_menu.xml",
         "views/checkout_view.xml",
